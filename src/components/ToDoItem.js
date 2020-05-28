@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 
 import './Item.css';
 
-function ToDoItem(props) {
+export default function ToDoItem(props) {
     const getStyle = () => {
         return {
             backgroundColor: '#eee',
             padding: '10px',
             borderBottom: '1px dotted #ccc',
+            marginBottom: '5px',
             textDecoration: props.todo.completed ? 'line-through' : 'none'
         }
     }
@@ -29,4 +30,3 @@ function ToDoItem(props) {
 ToDoItem.propTypes = {
     todo: PropTypes.object.isRequired
 }
-export default ToDoItem
